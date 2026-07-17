@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bubble Sort Visualizer</h1>
+        <p>Visualize the Bubble Sort Algorithm using HTML, CSS and JavaScript</p>
+    </header>
+
+    <div class="container">
+
+        <!--INPUT SECTION-->
+
+        <section class="panel">
+
+            <h2>Array Input</h2>
+
+            <input
+                type="text"
+                id="arrayInput"
+                placeholder="Example : 12,5,-3,7,18,9">
+
+            <div class="button-row">
+
+                <button id="randomBtn">
+                    Generate Random Array
+                </button>
+
+                <button id="visualizeBtn">
+                    Generate Visualization
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--ARRAY SIZE-->
+
+        <section class="panel">
+
+            <h2>Array Size</h2>
+
+            <div class="slider-row">
+
+                <span>1</span>
+
+                <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="20"
+                    id="sizeSlider">
+
+                <span>100</span>
+
+            </div>
+
+            <p>
+                Current Size :
+                <span id="sizeValue">20</span>
+            </p>
+
+        </section>
+
+        <!--SPEED-->
+
+        <section class="panel">
+
+            <h2>Animation Speed</h2>
+
+            <div class="slider-row">
+
+                <span>0.25x</span>
+
+                <input
+                    type="range"
+                    min="0.25"
+                    max="4"
+                    value="1"
+                    step="0.25"
+                    id="speedSlider">
+
+                <span>4x</span>
+
+            </div>
+
+            <p>
+
+                Current Speed :
+
+                <span id="speedValue">
+                    1x
+                </span>
+
+            </p>
+
+        </section>
+
+        <!--CONTROL BUTTONS-->
+
+        <section class="panel">
+
+            <h2>Controls</h2>
+
+            <div class="button-grid">
+
+                <button id="sortBtn">
+                    Bubble Sort
+                </button>
+
+                <button id="pauseBtn">
+                    Pause
+                </button>
+
+                <button id="resumeBtn">
+                    Resume
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+        <!--VISUALIZATION-->
+
+        <section class="panel">
+
+            <h2>Visualization</h2>
+
+            <div id="visualizationArea">
+
+            </div>
+
+        </section>
+
+        <!--OUTPUT-->
+
+        <section class="panel">
+
+            <h2>Output</h2>
+
+            <div class="output-box">
+
+                <h3>Array Before Sorting</h3>
+
+                <p id="beforeArray">
+
+                    --
+
+                </p>
+
+            </div>
+
+            <div class="output-box">
+
+                <h3>Array After Sorting</h3>
+
+                <p id="afterArray">
+
+                    --
+
+                </p>
+
+            </div>
+
+            <div class="output-box">
+
+                <h3>Total Swaps</h3>
+
+                <p id="swapCount">
+
+                    0
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--COLOR LEGEND-->
+
+        <section class="panel">
+
+            <h2>Color Legend</h2>
+
+            <div class="legend">
+
+                <div class="legend-item">
+
+                    <div class="color blue"></div>
+
+                    <span>Unchecked</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="color yellow"></div>
+
+                    <span>Comparing</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="color red"></div>
+
+                    <span>Swapping</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="color green"></div>
+
+                    <span>Sorted</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    <footer>
+
+        <p>
+
+            Bubble Sort Visualizer
+
+        </p>
+
+        <p>
+
+            Built by Ayush— Data Rhythms End Term Project
+
+        </p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
